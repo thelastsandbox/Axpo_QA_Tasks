@@ -11,6 +11,11 @@ const routes: Routes = [
       import("./features/article/routes/home/home.component"),
   },
   {
+    path: "QA",
+    loadComponent: () =>
+      import("./features/article/routes/qa-tasks/qa.component"),
+  },
+  {
     path: "login",
     loadComponent: () => import("./core/auth/auth.component"),
     canActivate: [

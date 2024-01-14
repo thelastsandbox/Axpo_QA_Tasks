@@ -1,0 +1,494 @@
+<div class="container">
+  <div>
+    <p><b>Tasks</b></p>
+    <p>
+      <b>1. </b>As your first task, help the dev teams prioritise what features
+      should be tested and why, between the following options:
+    </p>
+    <ul>
+      <li>Authentication flows (sign-up, sign-in, password reset)</li>
+      <li>
+        Feeds (loading and pagination for both the user's feed and the global
+        feed)
+      </li>
+      <li>Articles (creating, editing, reading, and deleting an article)</li>
+      <li>
+        Following authors (following a new author, feed getting updated,
+        unfollowing)
+      </li>
+      <li>Comments (creating, reading, deleting)</li>
+      <li>API Contracts</li>
+    </ul>
+    <div class="answer_tit"><p>Respuesta</p></div>
+    <div class="answer_content">
+      <p>
+        Para priorizar los test he considerado los siguientes factores:<b>
+          importancia para la empresa, riesgo, complejidad, frecuencia de uso y
+          nivel en la web (portadas, detalles) .</b
+        >
+        Por lo que mi orden sería el siguiente:
+      </p>
+      <ul>
+        <li>
+          <p><b>Authentication flows (sign-up, sign-in, password reset)</b></p>
+          <p>
+            Esta función es fundamental para el sistema, sin que los usuarios
+            puedan registrarse o iniciar sesión, no pueden interactuar como es
+            debido en la web además de la mala imagen para la empresa que ya al
+            inicio del uso de la web tengas problemas de usabilidad. Ya no solo
+            deben ser procesos que no fallen, también es muy importante que sean
+            ágiles.
+          </p>
+        </li>
+        <li>
+          <p><b>API Contracts</b></p>
+          <p>
+            Esta función también es muy importnate porque hay que comproabar que
+            las API funcionen correctamente para el funcionamiento global de la
+            web.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b
+              >Articles (creating, editing, reading, and deleting an article)</b
+            >
+          </p>
+          <p>
+            El artículo es la entidad principal de la web, de él se extraen los
+            feeds, detalles etc... sin que la parte de creación, edición,
+            eliminación funcione bien, no sería viable la web y crearía
+            frustración a los usuarios.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b
+              >Feeds (loading and pagination for both the user's feed and the
+              global feed)</b
+            >
+          </p>
+          <p>
+            A menos nivel de importancia pero también siendo parte fundamental
+            la visualización correcta y la paginación de los feeds.
+          </p>
+        </li>
+        <li>
+          <p><b>Comments (creating, reading, deleting)</b></p>
+          <p>
+            La gestión de los comentarios es importante para que los usurios
+            interactuen entre sí y que la web vaya creciendo en popularidad. Los
+            test aunque no son tan prioritarios como los anteriores, también son
+            importantes.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b
+              >Following authors (following a new author, feed getting updated,
+              unfollowing)</b
+            >
+          </p>
+          <p>
+            Está función para mí como usuario es importante pero para el sistema
+            de testeo de esta web considero que es la que menos importancía
+            tiene, pero no por ello se debería dejar sin testear.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <p>
+      <b>2. </b>Once you have a prioritised list with your reasoning, prepare a
+      test plan which will cover the features mentioned on it. This test plan
+      should contain a standardised suite of tests with the usual fields (steps,
+      expected results, etc.). It is paramount that test cases are described
+      with the utmost clarity and detail, so as to allow any QA Engineer with no
+      previous knowledge of the application's domain to properly follow and
+      execute the cases. Every test case should have a criticality rating, as
+      well as an impact rating. This will lead to the following task.
+    </p>
+  </div>
+  <div class="answer_tit"><p>Respuesta</p></div>
+  <div class="answer_content">
+    <p>Para Conduit yo realizaría un documento con esta estructura:</p>
+    <ul>
+      <li>
+        <b>1. Introducción</b>
+        <ul>
+          <li>1.1. Objetivo del Plan de Pruebas</li>
+        </ul>
+      </li>
+      <li>
+        <b>2. Alcance de las Pruebas</b>
+        <ul>
+          <li>2.1. Resumen de las Pruebas a realizar</li>
+          <li>2.2. Casos de las Pruebas</li>
+        </ul>
+      </li>
+      <li>
+        <b>3. Entorno y configuración de las Pruebas</b>
+        <ul>
+          <li>3.1. Descripción de entornos de Pruebas</li>
+          <li>3.2. Criterios de Inicio</li>
+          <li>3.3. Criterios de aprovación/rechazo</li>
+        </ul>
+      </li>
+    </ul>
+    <div>
+      <p><b>Conduit Project</b></p>
+    </div>
+    <ul>
+      <li>
+        <b>1. Introducción</b>
+        <ul>
+          <li>
+            <p>1.1. Objetivo del Plan de Pruebas:</p>
+            <p>
+              Este documento, tiene como finalidad entregar las pautas y definir
+              la estrategia que se seguirá para conseguir una web de Calidad. El
+              objetivo general del plan es establecer la cronología y
+              condiciones para la aplicación de las pruebas de manera de
+              obtener, un sistema que pueda ser completado con una recepción
+              total de los interesados y entrar en operación con la totalidad de
+              las funcionalidades requeridas para su funcionamiento.
+            </p>
+            <p>
+              En cada uno de los archicos de pruebas (xxx-spec.ts), usaremos un
+              el patrón AAA (Arrange-Act-Assert) usado en diseños TDD.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>2. Alcance de las Pruebas</b>
+        <ul>
+          <li>
+            <p>2.1. Resumen de las Pruebas a realizar</p>
+            <p>
+              Para ello la mejor forma de representarlo es una tabla con todas
+              las especificaciones detalladas, donde podemos ver Inicio de las
+              pruebas, módulos a probar, orden nivel de impacto etc....
+            </p>
+            <div>
+              <table class="table">
+                <thead>
+                  <tr class="table-success">
+                    <th scope="col">Inicio</th>
+                    <th scope="col">Módulo</th>
+                    <th scope="col">Ord.</th>
+                    <th scope="col">N.Imp.</th>
+                    <th scope="col">Objetivo</th>
+                    <th scope="col">Archivos</th>
+                    <th scope="col">Detalle</th>
+                    <th scope="col">Responsable</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>16/01/2024</td>
+                    <td>Authentication</td>
+                    <td>1</td>
+                    <td>Alto</td>
+                    <td>
+                      Comprobar que todas las funcionalidades de Registro,
+                      Login, Recuperación de Password funcionen correctamente.
+                    </td>
+                    <td>
+                      -login-spec.ts<br />
+                      -register-spec.ts<br />
+                      -force-logout-spec.ts<br />
+                    </td>
+                    <td>
+                      Una vez que el departamento de desarrollo de por
+                      finalizadas las pruebas unitarias de cada una de las
+                      partes de este módulo, se realizan las pruebas end2end con
+                      cypres, para ellos habrá que realizar los test de los
+                      archivos indicados.
+                    </td>
+                    <td>Equipo QA</td>
+                  </tr>
+                  <tr class="table-secondary">
+                    <td>16/01/2024</td>
+                    <td>API Contracts</td>
+                    <td>2</td>
+                    <td>Alto</td>
+                    <td>Comprobar que la API funciona correctamente.</td>
+                    <td></td>
+                    <td>
+                      Para hacer las pruebas de la API se utilizará Postman,
+                      para comprobar que todas las llamadas Rest funcionen
+                      correctamente y reliazaremos también las pruebas de carga
+                      de peticiones masivas.
+                    </td>
+                    <td>Equipo QA</td>
+                  </tr>
+                  <tr>
+                    <td>16/01/2024</td>
+                    <td>Articles</td>
+                    <td>3</td>
+                    <td>Alto</td>
+                    <td>
+                      Realizar todas las pruebas necesarias para que se creen,
+                      modifique y elimine correctamente los artículos.
+                    </td>
+                    <td>-new-post-spec.ts</td>
+                    <td>
+                      Una vez finalizadas las pruenas unitarias, se realizarán
+                      las pruebas end2end con cypress, donde comprobaremos que
+                      todos las pruebas referentes a la creación, modificacion,
+                      eliminación de artículo funciona correctamente.
+                    </td>
+                    <td>Equipo QA</td>
+                  </tr>
+                  <tr class="table-secondary">
+                    <td>16/01/2024</td>
+                    <td>Feeds</td>
+                    <td>4</td>
+                    <td>Medio</td>
+                    <td>
+                      Se realizaran las pruebas necesarias para comprobar su
+                      funcionamiento óptimo.
+                    </td>
+                    <td>-feeds-spec.ts -pagination-spec.ts</td>
+                    <td>
+                      Tras dar el visto bueno desde el departamento de
+                      desarrollo a las pruebas unitarias, se realizaran las
+                      pruebas end2end con cypress.
+                    </td>
+                    <td>Equipo QA</td>
+                  </tr>
+                  <tr>
+                    <td>16/01/2024</td>
+                    <td>Comments</td>
+                    <td>5</td>
+                    <td>Medio</td>
+                    <td>
+                      Realizar todas las pruebas necesarias para que se creen,
+                      modifique, elimine y validen correctamente los
+                      comentarios.
+                    </td>
+                    <td>-comments-spec.ts</td>
+                    <td>
+                      Al terminar las pruebas unitarias, realizaremos las
+                      pruebas end2end con cypress para comprobara que todos los
+                      procesos de creación, modificación y eliminación funcionan
+                      como deben.
+                    </td>
+                    <td>Equipo QA</td>
+                  </tr>
+                  <tr class="table-secondary">
+                    <td>16/01/2024</td>
+                    <td>Following authors</td>
+                    <td>6</td>
+                    <td>Bajo</td>
+                    <td>Compronaremos que la funcionalidad es correcta</td>
+                    <td>-follow-user-spec.ts</td>
+                    <td>
+                      Se realizaran las pruebas end2end con cypress una vez que
+                      hayan dado el visto bueno a las pruebas unitarias desde el
+                      departamento de desarrollo.
+                    </td>
+                    <td>Equipo QA</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br />
+          </li>
+          <li>
+            <p>2.2. Casos de las Pruebas:</p>
+            <p>
+              En esta tabla visualizamos el número de pruebas que se realizarán
+              agrupandolas por el módulo y el tipo. La finalidad de este cuadro
+              es saber el número tal de pruebas que se van a realizar.
+            </p>
+            <div>
+              <table class="table">
+                <thead>
+                  <tr class="table-success">
+                    <th scope="col">Casos Disponibles</th>
+                    <th scope="col">Modulo</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Total Casos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>120</td>
+                    <td>Authentication</td>
+                    <td>end2end</td>
+                    <td>120</td>
+                  </tr>
+                  <tr class="table-secondary">
+                    <td>12</td>
+                    <td>API Contracts</td>
+                    <td>Postman</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td>95</td>
+                    <td>Articles</td>
+                    <td>end2end</td>
+                    <td>95</td>
+                  </tr>
+                  <tr class="table-secondary">
+                    <td>36</td>
+                    <td>Feeds</td>
+                    <td>end2end</td>
+                    <td>36</td>
+                  </tr>
+                  <tr>
+                    <td>72</td>
+                    <td>Comments</td>
+                    <td>end2end</td>
+                    <td>72</td>
+                  </tr>
+                  <tr class="table-secondary">
+                    <td>11</td>
+                    <td>Following authors</td>
+                    <td>end2end</td>
+                    <td>11</td>
+                  </tr>
+                </tbody>
+                <thead>
+                  <tr class="table-success">
+                    <td><b>Total</b></td>
+                    <td></td>
+                    <td></td>
+                    <td><b>346</b></td>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b>3. Entorno y configuración de las Pruebas</b></p>
+        <ul>
+          <li>
+            <p>3.1. Descripción de entornos de Pruebas</p>
+            <p>
+              Para el proceso de pruebas del proyecto se requiere de la
+              disponibilidad de los siguientes entornos y software:
+            </p>
+            <p>
+              Servidor Windows Server 2022 con Internet Information Server 7.0.
+            </p>
+            <ul>
+              <li>Node.js 18x.+</li>
+              <li>Git</li>
+              <li>Jenkins</li>
+              <li>Java SE</li>
+              <li>npm</li>
+              <li>Cypress.io</li>
+            </ul>
+            <br />
+          </li>
+          <li>
+            <p>3.2. Criterios de Inicio</p>
+            <p>Aceptación del plan de pruebas.</p>
+            <p>Aceptación de paquetes.</p>
+            <p>
+              Revisión y aceptación de los paquetes de desarrollo, y que este
+              cumpla con las condiciones de aceptación.
+            </p>
+            <p>Aceptación de ambiente.</p>
+            <p>
+              Revisión y aceptación del ambiente, y que este cumpla con las
+              condiciones de aceptación
+            </p>
+          </li>
+          <li>
+            <p>3.3. Criterios de aprovación/rechazo.</p>
+            <p>
+              <b>Errores Graves:</b> información crítica presentada
+              erróneamente, información mal registrada en la base de datos,
+              caídas de programas, incumplimiento de objetivos en funciones
+              principales, bloqueantes para el usuario, etc.
+            </p>
+            <p>
+              <b>Errores Medios (comunes):</b> todos los errores similares a los
+              anteriores pero que no sean bloqueantes para el usurio.
+            </p>
+            <p>
+              <b>Errores Leves:</b> errores en presentación de datos
+              secundarios, no adecuación a estándares, comportamientos correctos
+              pero diferentes en situaciones similares, dificultades de
+              operación, etc.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <p>
+      <b>3. </b>Prepare an automated suite of tests for those scenarios which
+      you consider “worthy” of being automated. You may use the tools you feel
+      most comfortable with. Try and focus on scalability, reusability, and
+      simplicity. You will be expected to reason about decisions regarding
+      selector usage, error handling, SoC, CI/CD integration, efficiency,
+      brittleness, performance, and readability.
+    </p>
+  </div>
+  <div>
+    <p>
+      <b>4. </b>The current Conduit infrastructure does not boast powerful
+      resources. This means that the CI/CD pipelines where the tests will be
+      executed can't handle multiple agents with multiple threads. With the
+      criticality and impact ratings from the previous tasks, decide what would
+      be an ideal regression testing landscape, which tests should be included
+      in which execu-tion pipelines, and why. If you consider there are any
+      particular algorithms or tech-niques to be used to reduce the amount of
+      regression tests without compromising coverage, briefly discuss them.
+      Also, mark the tests (if any) that you consider worthy of being tested in
+      a multi-browser environment.
+    </p>
+  </div>
+  <div>
+    <p>
+      <b>5. </b>Conduit does have a suite of tests for their API (one of the
+      developers had worked with Postman before, and generated a collection of
+      tests). The spec and collection are located here:
+      <a
+        href="https://github.com/gothinkster/realworld/tree/main/api"
+        target="_blank"
+        >Conduit API Spec</a
+      >
+      Go through the collection briefly, and see if there's anything you would
+      add, change, or remove. In case some of the tests should be included in
+      any of the regression pipe-lines, do state why.
+    </p>
+  </div>
+  <div>
+    <p>
+      <b>6. </b>After all your hard work, the Conduit's team feel more than
+      confident that you could be a very good asset to the team and the company.
+      That's why they wish to know more about you and your approach to QA.
+      Please navigate to the
+      <a href="https://roadmap.sh/qa" target="_blank">QA Roadmap</a>, and mark
+      as “Done” (right click) each of the topics you consider yourself to be
+      proficient with. Then you can “Share Progress” obtaining a personalised
+      URL. Once you've established your knowledge, they mention that they have
+      some spare budget to consider switching stack for the newly created QA
+      department. This means you have total freedom of choice in terms of what
+      tools you'd like to use for your QA needs. Frameworks, Assertion
+      Libraries, Test Management, Bug Tracking… Anything that you require would
+      be considered by the financial department and acquired. What would be your
+      ideal tool stack, and why? Bear in mind that the current architec-ture of
+      Conduit is a .NET micro-service backend, with an Angular frontend SPA.
+    </p>
+  </div>
+  <div>
+    <p>
+      <b>7. </b>Finally, one of the senior engineers at Conduit sees testing as
+      a waste of time (he was basically the force behind the team not having a
+      proper testing landscape). He wants to know your approach towards the “new
+      fad” of Shift-Left, and if you consider it wiser than a Shift-Right
+      approach to the SDLC and STLC.
+    </p>
+  </div>
+</div>
