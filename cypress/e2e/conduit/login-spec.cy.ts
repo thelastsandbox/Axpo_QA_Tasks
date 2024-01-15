@@ -1,9 +1,11 @@
 /// <reference types="Cypress" />
 
+const baseUrl = Cypress.env("baseUrl");
+
 describe("Conduit Login", () => {
   before(() => cy.registerUserIfNeeded());
   beforeEach(() => {
-    cy.visit("/");
+    cy.visit(baseUrl);
     // we are not logged in
   });
 

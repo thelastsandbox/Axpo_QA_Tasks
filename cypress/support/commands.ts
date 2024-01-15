@@ -1,8 +1,32 @@
 /// <reference types="cypress" />
-import "@cypress/code-coverage/support";
-import "@bahmutov/cy-api/support";
+
+import * as cypress from "cypress";
+
+//import "@cypress/code-coverage/support";
+//import "@bahmutov/cy-api/support";
 
 const apiUrl = Cypress.env("apiUrl");
+
+// creates a user with email and password
+// defined in cypress.json environment variables
+// if the user already exists, ignores the error
+// or given user info parameters
+Cypress.Commands.add("registerUserIfNeeded", (options = {}) => {
+  const defaults = {
+    image: "https://robohash.org/6FJ.png?set=set3&size=150x150",
+    // email, password
+    ...Cypress.env("user"),
+  };
+  const user = Cypress._.defaults({}, options, defaults);
+  cy.request({
+    method: "POST",
+    url: `${apiUrl}/api/users`,
+    body: {
+      user,
+    },
+    failOnStatusCode: false,
+  });
+});
 
 // a custom Cypress command to login using XHR call
 // and then set the received token in the local storage
@@ -27,27 +51,6 @@ Cypress.Commands.add("getLoginToken", (user = Cypress.env("user")) => {
     })
     .its("body.user.token")
     .should("exist");
-});
-
-// creates a user with email and password
-// defined in cypress.json environment variables
-// if the user already exists, ignores the error
-// or given user info parameters
-Cypress.Commands.add("registerUserIfNeeded", (options = {}) => {
-  const defaults = {
-    image: "https://robohash.org/6FJ.png?set=set3&size=150x150",
-    // email, password
-    ...Cypress.env("user"),
-  };
-  const user = Cypress._.defaults({}, options, defaults);
-  cy.request({
-    method: "POST",
-    url: `${apiUrl}/api/users`,
-    body: {
-      user,
-    },
-    failOnStatusCode: false,
-  });
 });
 
 /**
@@ -160,3 +163,40 @@ Cypress.Commands.add("postComment", (articleSlug, text) => {
   // need to reload the page to see it
   cy.reload();
 });
+
+// ***********************************************
+// This example commands.ts shows you how to
+// create various custom commands and overwrite
+// existing commands.
+//
+// For more comprehensive examples of custom
+// commands please read more here:
+// https://on.cypress.io/custom-commands
+// ***********************************************
+//
+//
+// -- This is a parent command --
+// Cypress.Commands.add('login', (email, password) => { ... })
+//
+//
+// -- This is a child command --
+// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+//
+//
+// -- This is a dual command --
+// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
+//
+//
+// -- This will overwrite an existing command --
+// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+//
+// declare global {
+//   namespace Cypress {
+//     interface Chainable {
+//       login(email: string, password: string): Chainable<void>
+//       drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
+//       dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
+//       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
+//     }
+//   }
+// }
