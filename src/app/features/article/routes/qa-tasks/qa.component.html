@@ -506,6 +506,79 @@
       Also, mark the tests (if any) that you consider worthy of being tested in
       a multi-browser environment.
     </p>
+    <div class="answer_tit"><p>Respuesta</p></div>
+
+    <div class="answer_content">
+      <p>
+        Tanto las pruebas iniciales como las de regresión están incluidas dentro
+        de un proceso de integración contínua en nuestro caso con Jenkins.
+      </p>
+      <p>
+        <img
+          src="https://github.com/thelastsandbox/Axpo_QA_Tasks/blob/main/src/app/features/article/routes/qa-tasks/imgs/cicd.PNG?raw=true"
+        />
+      </p>
+      <p>
+        Los diferentes tipos de pruebas de regresión son:
+        <b>Pruebas de regresión correctivas</b>,
+        <b>Pruebas de regresión progresivas</b>,
+        <b>Pruebas de regresión retrospectivas</b>
+      </p>
+      <p>
+        En el caso de <b>Conduit</b> solo sería necesario hacer las
+        <b>Pruebas de regresión correctivas</b>, ya que de lo que se quejan los
+        usuarios es de los erroes que se encuentran a la hora de usar la web, no
+        piden actualizaciones para que tuvieramos que realizar
+        <b>Pruebas de regresión progresivas</b> ni tampoco se va a realizar
+        ningun cambio de plataforma para tener que hacer
+        <b>Pruebas de regresión retrospectivas</b>.
+      </p>
+      <p>
+        Una vez decidido que se van a hacer este tipo de pruebas de regresion
+        debemos hacer una seleción de dichas pruebas:
+      </p>
+      <ul>
+        <li>
+          <b>Selección de pruebas de regresión</b>: Consiste en seleccionar un
+          subconjunto de casos de prueba que sean relevantes para los cambios
+          realizados en el software, y descartar los que no lo sean. Esto reduce
+          el tiempo y el esfuerzo de ejecutar pruebas innecesarias. Existen
+          diferentes criterios y métodos para realizar la selección de pruebas
+          de regresión, como el análisis de impacto, la trazabilidad de
+          requisitos, la priorización de casos de prueba, etc.
+        </li>
+        <li>
+          <b>Minimización de pruebas de regresión</b>: Consiste en eliminar los
+          casos de prueba redundantes o duplicados que no aportan valor a la
+          cobertura. Esto reduce el tamaño del conjunto de pruebas de regresión
+          y mejora la eficiencia. Existen diferentes técnicas para realizar la
+          minimización de pruebas de regresión, como el análisis de
+          dependencias, la agrupación de casos de prueba, el uso de heurísticas,
+          etc.
+        </li>
+        <li>
+          <b>Automatización de pruebas de regresión</b>: Consiste en utilizar
+          herramientas y scripts que permitan ejecutar las pruebas de regresión
+          de forma automática, sin intervención humana. Esto reduce el error
+          humano, aumenta la velocidad y la consistencia de las pruebas, y
+          permite ejecutarlas en diferentes entornos y configuraciones. Existen
+          diferentes herramientas y frameworks para realizar la automatización
+          de pruebas de regresión, como Selenium, TestNG, Cucumber, etc.
+        </li>
+      </ul>
+      <p>
+        Para hacer una buena selección de las pruebas de regresión hay que
+        conocer bien el productor y elimimnar ya pruebas pasadas que sabemos
+        perfectamente que funcionan con toda seguridad, en definitiva no
+        realizar pruebas nuevamente que sabesmos que no fallan.
+      </p>
+      <p>
+        Para que las pruebas de regresión sean minimas lo ideal es que
+        inicialmente se haga un estudio exhaustivo de todos los casos de
+        pruebas, para evitar posibles fallos cuando se realicen cambios en el
+        software.
+      </p>
+    </div>
   </div>
   <div>
     <p>
