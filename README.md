@@ -20,7 +20,7 @@ Make sure you have the [Angular CLI](https://github.com/angular/angular-cli#inst
 
 Next step is install packages with `npm i`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/` or nun `ng serve --o` and browser open the web automaticly. The app will automatically reload if you change any of the source files.
 
 ### Building the project
 
