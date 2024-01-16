@@ -1,4 +1,4 @@
-https://eligenio.com/wp-content/uploads/2023/06/Axpo_energia.png
+[!(https://eligenio.com/wp-content/uploads/2023/06/Axpo_energia.png)]
 
 # QA TAKE-HOME ASSIGNMENT
 
@@ -8,7 +8,7 @@ In the web aplication is answered about QA take-home Assignment.
 
 Only access to the web and click on QA Task.
 
-(https://github.com/thelastsandbox/Axpo_QA_Tasks/blob/main/src/app/features/article/routes/qa-tasks/imgs/specs.PNG?raw=true)
+[!(https://github.com/thelastsandbox/Axpo_QA_Tasks/blob/main/src/app/features/article/routes/qa-tasks/imgs/Qa-task.PNG?raw=true)]
 
 # How it works
 
