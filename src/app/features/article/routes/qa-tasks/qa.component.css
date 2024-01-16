@@ -1,6 +1,15 @@
-.answer_tit {
+.task_title {
+  font-size: 2em;
   color: #5cb85c;
+  font-weight: bold;
 }
 
-.answer_content {
+.answer_tit {
+  color: #5cb85c;
+  font-weight: bold;
+}
+
+.task_number {
+  font-size: 3em;
+  font-weight: bold;
 }

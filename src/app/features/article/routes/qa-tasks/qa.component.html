@@ -1,9 +1,11 @@
 <div class="container">
   <div>
-    <p><b>Tasks</b></p>
+    <p class="task_title">Task</p>
+    <p></p>
+    <p class="task_number">1.</p>
     <p>
-      <b>1. </b>As your first task, help the dev teams prioritise what features
-      should be tested and why, between the following options:
+      As your first task, help the dev teams prioritise what features should be
+      tested and why, between the following options:
     </p>
     <ul>
       <li>Authentication flows (sign-up, sign-in, password reset)</li>
@@ -43,7 +45,7 @@
         <li>
           <p><b>API Contracts</b></p>
           <p>
-            Esta función también es muy importnate porque hay que comproabar que
+            Esta función también es muy importante porque hay que comproabar que
             las API funcionen correctamente para el funcionamiento global de la
             web.
           </p>
@@ -76,7 +78,7 @@
         <li>
           <p><b>Comments (creating, reading, deleting)</b></p>
           <p>
-            La gestión de los comentarios es importante para que los usurios
+            La gestión de los comentarios es importante para que los usuarios
             interactuen entre sí y que la web vaya creciendo en popularidad. Los
             test aunque no son tan prioritarios como los anteriores, también son
             importantes.
@@ -99,10 +101,11 @@
     </div>
   </div>
   <div>
+    <p class="task_number">2.</p>
     <p>
-      <b>2. </b>Once you have a prioritised list with your reasoning, prepare a
-      test plan which will cover the features mentioned on it. This test plan
-      should contain a standardised suite of tests with the usual fields (steps,
+      Once you have a prioritised list with your reasoning, prepare a test plan
+      which will cover the features mentioned on it. This test plan should
+      contain a standardised suite of tests with the usual fields (steps,
       expected results, etc.). It is paramount that test cases are described
       with the utmost clarity and detail, so as to allow any QA Engineer with no
       previous knowledge of the application's domain to properly follow and
@@ -113,6 +116,9 @@
   <div class="answer_tit"><p>Respuesta</p></div>
   <div class="answer_content">
     <p>Para Conduit yo realizaría un documento con esta estructura:</p>
+    <div>
+      <p><b>Índice</b></p>
+    </div>
     <ul>
       <li>
         <b>1. Introducción</b>
@@ -169,7 +175,7 @@
             <p>
               Para ello la mejor forma de representarlo es una tabla con todas
               las especificaciones detalladas, donde podemos ver Inicio de las
-              pruebas, módulos a probar, orden nivel de impacto etc....
+              pruebas, módulos a probar, orden, nivel de impacto etc....
             </p>
             <div>
               <table class="table">
@@ -204,7 +210,7 @@
                       Una vez que el departamento de desarrollo de por
                       finalizadas las pruebas unitarias de cada una de las
                       partes de este módulo, se realizan las pruebas end2end con
-                      cypres, para ellos habrá que realizar los test de los
+                      cypres, para ello habrá que realizar los test de los
                       archivos indicados.
                     </td>
                     <td>Equipo QA</td>
@@ -218,7 +224,7 @@
                     <td></td>
                     <td>
                       Para hacer las pruebas de la API se utilizará Postman,
-                      para comprobar que todas las llamadas Rest funcionen
+                      para comprobar que todas las llamadas API Rest funcionen
                       correctamente y reliazaremos también las pruebas de carga
                       de peticiones masivas.
                     </td>
@@ -238,7 +244,7 @@
                       Una vez finalizadas las pruenas unitarias, se realizarán
                       las pruebas end2end con cypress, donde comprobaremos que
                       todos las pruebas referentes a la creación, modificacion,
-                      eliminación de artículo funciona correctamente.
+                      eliminación de artículo funcionan correctamente.
                     </td>
                     <td>Equipo QA</td>
                   </tr>
@@ -249,7 +255,7 @@
                     <td>Medio</td>
                     <td>
                       Se realizaran las pruebas necesarias para comprobar su
-                      funcionamiento óptimo.
+                      funcionamiento correcto.
                     </td>
                     <td>-feeds-spec.ts -pagination-spec.ts</td>
                     <td>
@@ -309,7 +315,7 @@
                 <thead>
                   <tr class="table-success">
                     <th scope="col">Casos Disponibles</th>
-                    <th scope="col">Modulo</th>
+                    <th scope="col">Módulo</th>
                     <th scope="col">Tipo</th>
                     <th scope="col">Total Casos</th>
                   </tr>
@@ -411,7 +417,7 @@
             </p>
             <p>
               <b>Errores Medios (comunes):</b> todos los errores similares a los
-              anteriores pero que no sean bloqueantes para el usurio.
+              anteriores pero que no sean bloqueantes para el usuario.
             </p>
             <p>
               <b>Errores Leves:</b> errores en presentación de datos
@@ -425,10 +431,11 @@
     </ul>
   </div>
   <div>
+    <p class="task_number">3.</p>
     <p>
-      <b>3. </b>Prepare an automated suite of tests for those scenarios which
-      you consider “worthy” of being automated. You may use the tools you feel
-      most comfortable with. Try and focus on scalability, reusability, and
+      Prepare an automated suite of tests for those scenarios which you consider
+      “worthy” of being automated. You may use the tools you feel most
+      comfortable with. Try and focus on scalability, reusability, and
       simplicity. You will be expected to reason about decisions regarding
       selector usage, error handling, SoC, CI/CD integration, efficiency,
       brittleness, performance, and readability.
@@ -450,12 +457,12 @@
         Para las <b>Pruebas end2end</b> combinaremos el software de testing
         <b>Cypress.io</b> con el sistema de integración continua (CI/CD)
         <b>Jenkins</b>. Con jenkins podemos realizar las pruebas end2end de
-        forma automática sin ningun problema ademas de realizar pasa a paso un
+        forma automática sin ningun problema además de realizar pasa a paso un
         integración continua.
       </p>
       <p>
         Para las pruebas <b>end2end</b> cogeremos cada uno de los archivos de
-        los módulos los clasificaremos y agruparemos por cada modulo y crearemos
+        los módulos los clasificaremos y agruparemos por cada módulo y crearemos
         pipelines <b>sencillos y escalables</b>.
       </p>
       <p>
@@ -476,7 +483,7 @@
       </p>
       <p>
         Una vez comprabados los archivos specs los agruparemos segun su módulo y
-        crearemos en Jenkins un <b>pipeline</b> por cada uno de los modulos que
+        crearemos en Jenkins un <b>pipeline</b> por cada uno de los módulos que
         queremos probar, así conseguiremos que sea
         <b>sencillo y estructurado</b>.
       </p>
@@ -486,25 +493,26 @@
         />
       </p>
       <p>
-        Estos pipelines son fáciles de crear y reutilizar, además de pòder ser
+        Estos pipelines son fáciles de crear y reutilizar, además de poder ser
         programados y ser lanzados de forma <b>automática</b> cuando nosotros
-        queramos. De igual forma podriamos o agruparlos o dividirlos segun la
+        queramos. De igual forma podríamos agruparlos o dividirlos según la
         sencillez o complejidad del proyecto.
       </p>
     </div>
   </div>
   <div>
+    <p class="task_number">4.</p>
     <p>
-      <b>4. </b>The current Conduit infrastructure does not boast powerful
-      resources. This means that the CI/CD pipelines where the tests will be
-      executed can't handle multiple agents with multiple threads. With the
-      criticality and impact ratings from the previous tasks, decide what would
-      be an ideal regression testing landscape, which tests should be included
-      in which execu-tion pipelines, and why. If you consider there are any
-      particular algorithms or tech-niques to be used to reduce the amount of
-      regression tests without compromising coverage, briefly discuss them.
-      Also, mark the tests (if any) that you consider worthy of being tested in
-      a multi-browser environment.
+      The current Conduit infrastructure does not boast powerful resources. This
+      means that the CI/CD pipelines where the tests will be executed can't
+      handle multiple agents with multiple threads. With the criticality and
+      impact ratings from the previous tasks, decide what would be an ideal
+      regression testing landscape, which tests should be included in which
+      execu-tion pipelines, and why. If you consider there are any particular
+      algorithms or tech-niques to be used to reduce the amount of regression
+      tests without compromising coverage, briefly discuss them. Also, mark the
+      tests (if any) that you consider worthy of being tested in a multi-browser
+      environment.
     </p>
     <div class="answer_tit"><p>Respuesta</p></div>
 
@@ -534,7 +542,7 @@
         <b>Pruebas de regresión retrospectivas</b>.
       </p>
       <p>
-        Una vez decidido que se van a hacer este tipo de pruebas de regresion
+        Una vez decidido que se van a hacer este tipo de pruebas de regresión
         debemos hacer una seleción de dichas pruebas:
       </p>
       <ul>
@@ -585,10 +593,11 @@
     </div>
   </div>
   <div>
+    <p class="task_number">5.</p>
     <p>
-      <b>5. </b>Conduit does have a suite of tests for their API (one of the
-      developers had worked with Postman before, and generated a collection of
-      tests). The spec and collection are located here:
+      Conduit does have a suite of tests for their API (one of the developers
+      had worked with Postman before, and generated a collection of tests). The
+      spec and collection are located here:
       <a
         href="https://github.com/gothinkster/realworld/tree/main/api"
         target="_blank"
@@ -614,11 +623,12 @@
     </p>
   </div>
   <div>
+    <p class="task_number">6.</p>
     <p>
-      <b>6. </b>After all your hard work, the Conduit's team feel more than
-      confident that you could be a very good asset to the team and the company.
-      That's why they wish to know more about you and your approach to QA.
-      Please navigate to the
+      After all your hard work, the Conduit's team feel more than confident that
+      you could be a very good asset to the team and the company. That's why
+      they wish to know more about you and your approach to QA. Please navigate
+      to the
       <a href="https://roadmap.sh/qa" target="_blank">QA Roadmap</a>, and mark
       as “Done” (right click) each of the topics you consider yourself to be
       proficient with. Then you can “Share Progress” obtaining a personalised
@@ -652,36 +662,38 @@
       <b>Kanban</b>.
     </p>
     <p>
-      El uso de .Net y Angular es muy buena elección por parte de Conduit ya que
-      es facilmente manejable con infinitos packages que ayudan a testear,
-      generar reports etc... por lo que los costes de montaje de un sitema de
-      Pruebas no es un gasto muy grande para la empresa.
+      El uso de .Net y Angular es muy buena elección por parte de
+      <b>Conduit</b> ya que es facilmente manejable con infinitos packages que
+      ayudan a testear, generar reports etc... por lo que los costes de montaje
+      de un sitema de Pruebas no es un gasto muy grande para la empresa.
     </p>
   </div>
 
   <div>
+    <p class="task_number">7.</p>
     <p>
-      <b>7. </b>Finally, one of the senior engineers at Conduit sees testing as
-      a waste of time (he was basically the force behind the team not having a
-      proper testing landscape). He wants to know your approach towards the “new
-      fad” of Shift-Left, and if you consider it wiser than a Shift-Right
-      approach to the SDLC and STLC.
+      Finally, one of the senior engineers at Conduit sees testing as a waste of
+      time (he was basically the force behind the team not having a proper
+      testing landscape). He wants to know your approach towards the “new fad”
+      of Shift-Left, and if you consider it wiser than a Shift-Right approach to
+      the SDLC and STLC.
     </p>
   </div>
   <div class="answer_tit"><p>Respuesta</p></div>
 
   <div class="answer_content">
     <p>
-      Considero que los metodos de pruebas Shift-Right y Shift-Left, se pueden
-      seguir usando... uno no reemplaza al otro, en función de la dimensión del
-      proyecto usaremos una metodología u otra. Por ejemplo aunque la tendendia
-      actual sea realizar un Shift-Left, es decir todo el estudio de casos y
-      planificación de pruebas hacerlo en la etapa inicial del proyecto, si nos
-      encontramos con un proyecto muy pequeño no sería aconsejable porque
-      podemos aumentar el plazo de entrega para un proyecto que a priori es
-      sencillo, por el contrario siempre que el proyecto sea de una diemnsión
-      mediana o grande siempre debemos usar una metodologia Shift-Left, tanto
-      para ciclos de vida de desarrollo SDLC como de test STCL.
+      Considero que los métodos de pruebas <b>Shift-Right</b> y
+      <b>Shift-Left</b>, se pueden seguir usando... uno no reemplaza al otro, en
+      función de la dimensión del proyecto usaremos una metodología u otra. Por
+      ejemplo aunque la tendencia actual sea realizar un Shift-Left, es decir
+      todo el estudio de casos y planificación de pruebas hacerlo en la etapa
+      inicial del proyecto, si nos encontramos con un proyecto muy pequeño no
+      sería aconsejable porque podemos aumentar el plazo de entrega para un
+      proyecto que a priori es sencillo, por el contrario siempre que el
+      proyecto sea de una diemnsión mediana o grande siempre debemos usar una
+      metodologia Shift-Left, tanto para ciclos de vida de desarrollo SDLC como
+      de test STCL.
     </p>
   </div>
 </div>
