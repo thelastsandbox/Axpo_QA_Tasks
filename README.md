@@ -8,7 +8,7 @@ In the web aplication is answered about QA take-home Assignment.
 
 Only access to the web and click on QA Task.
 
-![Qa-Task](https://github.com/thelastsandbox/Axpo_QA_Tasks/blob/main/src/app/features/article/routes/qa-tasks/imgs/Qa-task.PNG?raw=true)
+![Qa-Task](https://github.com/thelastsandbox/Axpo_QA_Tasks/blob/main/src/app/features/article/routes/qa-tasks/imgs/Qa_task_tab.PNG?raw=true)
 
 # How it works
 
